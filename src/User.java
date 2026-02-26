@@ -22,5 +22,4 @@ public class User {
     public boolean checkPassword(int inputPassword) {
         return password == inputPassword;
     }
-
 }

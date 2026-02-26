@@ -4,4 +4,5 @@ public class Main {
         System.out.println(newUser.getBalance());
         System.out.println(newUser.checkPassword(123));
     }
+
 }
