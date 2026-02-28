@@ -33,13 +33,12 @@ public class User {
     }
 
     public boolean deposit(double amount) {
-        if (amount <= 0) {
+        if (amount <= 0 && amount > balance) {
             return false;
         } else {
             balance += amount;
             addTransaction("Deposit", amount);
             return true;
-            // Add transaction Array
         }
     }
 
@@ -50,7 +49,6 @@ public class User {
             balance -= amount;
             addTransaction("Withdraw", amount);
             return true;
-            // Add transaction Array
         }
     }
 

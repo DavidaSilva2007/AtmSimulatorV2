@@ -8,40 +8,66 @@ public class Main {
         ArrayList<User> users = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
+        int menuChoice;
+        do {
+            // Start menu
+            System.out.println("-- Welcome to ATM Simulator --");
+            System.out.println();
+            System.out.println("1. Login");
+            System.out.println("2. Create Account");
+            System.out.println("3. Logout");
+            System.out.print("Enter option: ");
 
-        // Start menu
-        System.out.println("-- Welcome to ATM Simulator --");
-        System.out.println();
-        System.out.println("1. Login");
-        System.out.println("2. Create Account");
-        System.out.println("3. Logout");
-        System.out.print("Enter option: ");
+            // Input for options above
+            menuChoice = scanner.nextInt();
+            scanner.nextLine();
 
-        // Input for options above
-        int menuChoice = scanner.nextInt();
-        scanner.nextLine();
+            // Login menu
+            switch (menuChoice) {
+                case 1:
+                    // Log in
+                    System.out.print("Please enter username: ");
+                    String usernameInput = scanner.nextLine();
 
-        // Login menu
-        switch (menuChoice) {
-            case 1:
-                // Log in
-                System.out.print("Please enter username: ");
-                String usernameInput = scanner.nextLine();
+                    System.out.print("Please enter password: ");
+                    int passwordInput = scanner.nextInt();
 
-                System.out.print("Please enter password: ");
-                int passwordInput = scanner.nextInt();
+                    User user = findUser(users, usernameInput);
 
-                User user = findUser(users, usernameInput);
+                    if (user != null && user.checkPassword(passwordInput)) {
+                        System.out.println("Successful Login");
+                        Menu menu = new Menu();
+                        menu.menu(user);
+                    } else {
+                        System.out.println("Invalid username or password.");
+                    }
+                    break;
+                case 2:
+                    // Create account
+                    System.out.print("Enter new username: ");
+                    String newUsername = scanner.nextLine();
 
-                if (user != null && user.checkPassword(passwordInput)) {
-                    System.out.println("Successful Login");
-                    Menu menu = new Menu();
-                    menu.menu(user);
-                } else {
-                    System.out.println("Invalid username or password.");
-                }
-                break;
-        }
+                    if (findUser(users, newUsername) != null) {
+                        System.out.println("This username is already in use.");
+                        break;
+                    }
+
+                    System.out.print("Enter new password: ");
+                    int newPassword = scanner.nextInt();
+
+                    users.add(new User(newUsername, newPassword));
+                    System.out.println("New account has been created.");
+                    break;
+                case 3:
+                    // Exiting
+                    System.out.print("Exiting.");
+                    System.out.print(".");
+                    System.out.println("."); // Add delay for dots
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } while (menuChoice != 3);
     }
 
     public static User findUser(ArrayList<User> users, String username) {
