@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Main {
@@ -14,5 +16,22 @@ public class Main {
 
         System.out.println(bob.getUsername());
         System.out.println(bob.getBalance());
+
+        // Test deposits & withdrawals
+        jack.deposit(500);
+        jack.withdraw(200);
+
+        bob.deposit(1000);
+
+        // Print transaction history
+        System.out.println("Jack Transactions:");
+        for (String t : jack.getTransactions()) {
+            System.out.println(t);
+        }
+
+        System.out.println("\nBob Transactions:");
+        for (String t : bob.getTransactions()) {
+            System.out.println(t);
+        }
     }
 }

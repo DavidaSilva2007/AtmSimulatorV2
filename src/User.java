@@ -1,3 +1,6 @@
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class User {
@@ -34,6 +37,7 @@ public class User {
             return false;
         } else {
             balance += amount;
+            addTransaction("Deposit", amount);
             return true;
             // Add transaction Array
         }
@@ -44,12 +48,20 @@ public class User {
             return false;
         } else {
             balance -= amount;
+            addTransaction("Withdraw", amount);
             return true;
             // Add transaction Array
         }
     }
 
-    private void addTransaction(String type, int amount) {
-        // Use date and time, maybe there are libraries to do it for me?
+    private void addTransaction(String type, double amount) {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter customFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        String record = now.format(customFormatter)
+                + " | " + type
+                + " | $" + amount
+                + " | Balance: $" + balance;
+        transactions.add(record);
     }
 }
