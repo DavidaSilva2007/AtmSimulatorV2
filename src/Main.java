@@ -1,39 +1,55 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         ArrayList<User> users = new ArrayList<>();
-        users.add(new User("Jack", 100));
-        users.add(new User("Bob", 123));
+        Scanner scanner = new Scanner(System.in);
 
-        User jack = users.get(0);
-        User bob = users.get(1);
 
-        System.out.println(jack.getUsername());
-        System.out.println(jack.getBalance());
+        // Start menu
+        System.out.println("-- Welcome to ATM Simulator --");
+        System.out.println();
+        System.out.println("1. Login");
+        System.out.println("2. Create Account");
+        System.out.println("3. Logout");
+        System.out.print("Enter option: ");
 
-        System.out.println(bob.getUsername());
-        System.out.println(bob.getBalance());
+        // Input for options above
+        int menuChoice = scanner.nextInt();
+        scanner.nextLine();
 
-        // Test deposits & withdrawals
-        jack.deposit(500);
-        jack.withdraw(200);
+        // Login menu
+        switch (menuChoice) {
+            case 1:
+                // Log in
+                System.out.print("Please enter username: ");
+                String usernameInput = scanner.nextLine();
 
-        bob.deposit(1000);
+                System.out.print("Please enter password: ");
+                int passwordInput = scanner.nextInt();
 
-        // Print transaction history
-        System.out.println("Jack Transactions:");
-        for (String t : jack.getTransactions()) {
-            System.out.println(t);
+                User user = findUser(users, usernameInput);
+
+                if (user != null && user.checkPassword(passwordInput)) {
+                    System.out.println("Successful Login");
+                    Menu menu = new Menu();
+                    menu.menu(user);
+                } else {
+                    System.out.println("Invalid username or password.");
+                }
+                break;
         }
+    }
 
-        System.out.println("\nBob Transactions:");
-        for (String t : bob.getTransactions()) {
-            System.out.println(t);
+    public static User findUser(ArrayList<User> users, String username) {
+        for (User user: users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
         }
-
-
+        return null;
     }
 }
