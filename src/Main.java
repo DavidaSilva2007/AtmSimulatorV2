@@ -33,5 +33,7 @@ public class Main {
         for (String t : bob.getTransactions()) {
             System.out.println(t);
         }
+
+
     }
 }

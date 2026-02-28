@@ -33,14 +33,17 @@ public class Menu {
                         System.out.println("Deposit failed.");
                     }
                 case 3:
-                    System.out.println("Your balance: $" + user.getBalance());
                     // Balance
+                    System.out.println("Your balance: $" + user.getBalance());
                 case 4:
-                    break;
                     // Transaction history
+                    System.out.println("Transactions:");
+                    for (String i: user.getTransactions()) {
+                        System.out.println(i);
+                    }
                 case 5:
-                    System.out.println("Logging out.");
                     // Log out
+                    System.out.println("Logging out.");
                 default:
                     System.out.println("Invalid menu choice, please try again.");
             }
