@@ -32,7 +32,7 @@ public class User {
         return password == input;
     }
 
-    public boolean deposit(int amount) {
+    public boolean deposit(double amount) {
         if (amount <= 0) {
             return false;
         } else {
@@ -43,7 +43,7 @@ public class User {
         }
     }
 
-    public boolean withdraw(int amount) {
+    public boolean withdraw(double amount) {
         if (amount <= 0) {
             return false;
         } else {
