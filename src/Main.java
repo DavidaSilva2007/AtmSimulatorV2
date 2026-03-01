@@ -11,6 +11,7 @@ public class Main {
         int menuChoice;
         do {
             // Start menu
+            System.out.println();
             System.out.println("-- Welcome to ATM Simulator --");
             System.out.println();
             System.out.println("1. Login");
@@ -41,6 +42,7 @@ public class Main {
                     } else {
                         System.out.println("Invalid username or password.");
                     }
+                    delay(1);
                     break;
                 case 2:
                     // Create account
@@ -49,6 +51,7 @@ public class Main {
 
                     if (findUser(users, newUsername) != null) {
                         System.out.println("This username is already in use.");
+                        delay(1);
                         break;
                     }
 
@@ -57,12 +60,16 @@ public class Main {
 
                     users.add(new User(newUsername, newPassword));
                     System.out.println("New account has been created.");
+                    delay(1);
                     break;
                 case 3:
                     // Exiting
                     System.out.print("Exiting.");
+                    delay(0.3);
                     System.out.print(".");
+                    delay(0.3);
                     System.out.println("."); // Add delay for dots
+                    delay(0.3);
                     break;
                 default:
                     System.out.println("Invalid choice.");
@@ -77,5 +84,13 @@ public class Main {
             }
         }
         return null;
+    }
+
+    public static void delay(double delaySeconds) {
+        try {
+            Thread.sleep((long) (delaySeconds * 1000)); // Input is converted to seconds not milliseconds
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Restore the interrupt flag
+        }
     }
 }

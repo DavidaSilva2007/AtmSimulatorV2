@@ -20,6 +20,10 @@ public class User {
         return username;
     }
 
+    public int getPassword() {
+        return password;
+    }
+
     public double getBalance() {
         return balance;
     }
@@ -51,6 +55,8 @@ public class User {
             return true;
         }
     }
+
+
 
     private void addTransaction(String type, double amount) {
         LocalDateTime now = LocalDateTime.now();
