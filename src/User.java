@@ -5,13 +5,13 @@ import java.util.ArrayList;
 
 public class User {
     private String username;
-    private int password;
+    private int PIN;
     private double  balance;
     private ArrayList<String> transactions;
 
-    public User(String username, int password) {
+    public User(String username, int PIN) {
         this.username = username;
-        this.password = password;
+        this.PIN = PIN;
         this.balance = 0;
         this.transactions = new ArrayList<>();
     }
@@ -20,8 +20,8 @@ public class User {
         return username;
     }
 
-    public int getPassword() {
-        return password;
+    public int getPIN() {
+        return PIN;
     }
 
     public double getBalance() {
@@ -32,8 +32,8 @@ public class User {
         return transactions;
     }
 
-    public boolean checkPassword(int input) {
-        return password == input;
+    public boolean checkPIN(int input) {
+        return PIN == input;
     }
 
     public boolean deposit(double amount) {

@@ -42,9 +42,9 @@ public class Menu {
                     double withdrawAmount = scanner.nextDouble();
 
                     if (user.withdraw(withdrawAmount)) {
-                        System.out.println("Successfully deposit.");
+                        System.out.println("Successfully withdraw.");
                     } else {
-                        System.out.println("Deposit failed.");
+                        System.out.println("Withdraw failed.");
                     }
                     Main.delay(1);
                     break;
@@ -63,13 +63,13 @@ public class Menu {
                     break;
                 case 5:
                     // About
-                    System.out.print("Please enter password for confirmation: ");
+                    System.out.print("Please enter PIN for confirmation: ");
 
-                    int passwordInput = scanner.nextInt();
+                    int PINInput = scanner.nextInt();
 
-                    if (user.checkPassword(passwordInput)) {
+                    if (user.checkPIN(PINInput)) {
                         System.out.println("Username: " + user.getUsername());
-                        System.out.println("Password " + user.getPassword());
+                        System.out.println("PIN " + user.getPIN());
                     }
                     Main.delay(1);
                     break;

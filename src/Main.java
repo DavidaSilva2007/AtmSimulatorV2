@@ -17,7 +17,7 @@ public class Main {
             System.out.println("1. Login");
             System.out.println("2. Create Account");
             System.out.println("3. Logout");
-            System.out.print("Enter option: ");
+            System.out.print("Enter Option: ");
 
             // Input for options above
             menuChoice = scanner.nextInt();
@@ -30,17 +30,17 @@ public class Main {
                     System.out.print("Please enter username: ");
                     String usernameInput = scanner.nextLine();
 
-                    System.out.print("Please enter password: ");
-                    int passwordInput = scanner.nextInt();
+                    System.out.print("Please enter PIN: ");
+                    int PINInput = scanner.nextInt();
 
                     User user = findUser(users, usernameInput);
 
-                    if (user != null && user.checkPassword(passwordInput)) {
+                    if (user != null && user.checkPIN(PINInput)) {
                         System.out.println("Successful Login");
                         Menu menu = new Menu();
                         menu.menu(user);
                     } else {
-                        System.out.println("Invalid username or password.");
+                        System.out.println("Invalid username or PIN.");
                     }
                     delay(1);
                     break;
@@ -55,10 +55,10 @@ public class Main {
                         break;
                     }
 
-                    System.out.print("Enter new password: ");
-                    int newPassword = scanner.nextInt();
+                    System.out.print("Enter new PIN: ");
+                    int newPIN = scanner.nextInt();
 
-                    users.add(new User(newUsername, newPassword));
+                    users.add(new User(newUsername, newPIN));
                     System.out.println("New account has been created.");
                     delay(1);
                     break;
