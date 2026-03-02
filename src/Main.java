@@ -11,7 +11,7 @@ public class Main {
         int menuChoice;
         do {
             // Start menu
-            System.out.println();
+            bigGap();
             System.out.println("-- Welcome to ATM Simulator --");
             System.out.println();
             System.out.println("1. Login");
@@ -65,11 +65,11 @@ public class Main {
                 case 3:
                     // Exiting
                     System.out.print("Exiting.");
-                    delay(0.3);
+                    delay(0.5);
                     System.out.print(".");
-                    delay(0.3);
-                    System.out.println("."); // Add delay for dots
-                    delay(0.3);
+                    delay(0.5);
+                    System.out.println(".");
+                    delay(0.5);
                     break;
                 default:
                     System.out.println("Invalid choice.");
@@ -91,6 +91,12 @@ public class Main {
             Thread.sleep((long) (delaySeconds * 1000)); // Input is converted to seconds not milliseconds
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Restore the interrupt flag
+        }
+    }
+
+    public static void bigGap() {
+        for (int i = 0; i < 20; i++) {
+            System.out.println();
         }
     }
 }
