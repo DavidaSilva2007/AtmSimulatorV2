@@ -41,7 +41,7 @@ public class Menu {
                     // Withdraw
                     Main.bigGap();
 
-                    System.out.print("Enter deposit amount: ");
+                    System.out.print("Enter withdraw amount: ");
 
                     double withdrawAmount = scanner.nextDouble();
 
@@ -79,7 +79,7 @@ public class Menu {
 
                     if (user.checkPIN(PINInput)) {
                         System.out.println("Username: " + user.getUsername());
-                        System.out.println("PIN " + user.getPIN());
+                        System.out.println("PIN: " + user.getPIN());
                     }
                     backOption();
                     break;
@@ -88,7 +88,6 @@ public class Menu {
                     Main.bigGap();
 
                     System.out.println("Logging out.");
-                    backOption();
                     break;
                 default:
                     Main.bigGap();
@@ -97,7 +96,7 @@ public class Menu {
                     Main.delay(1);
             }
 
-        } while (menuChoice != 5);
+        } while (menuChoice != 6);
     }
 
     public void backOption() {

@@ -55,11 +55,19 @@ public class Main {
                         break;
                     }
 
-                    System.out.print("Enter new PIN: ");
+                    System.out.print("Enter new 4 digit PIN: ");
                     int newPIN = scanner.nextInt();
+
+                    while (newPIN < 1000 || newPIN > 9999) {
+                        System.out.println();
+                        System.out.println("Failed to create account, please only use 4 digits.");
+                        System.out.print("Enter new 4 digit PIN: ");
+                        newPIN = scanner.nextInt();
+                    }
 
                     users.add(new User(newUsername, newPIN));
                     System.out.println("New account has been created.");
+
                     delay(1);
                     break;
                 case 3:

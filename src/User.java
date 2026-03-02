@@ -47,12 +47,16 @@ public class User {
     }
 
     public boolean withdraw(double amount) {
-        if (amount <= 0) {
-            return false;
+        if (amount <= balance) {
+            if (amount <= 0) {
+                return false;
+            } else {
+                balance -= amount;
+                addTransaction("Withdraw", amount);
+                return true;
+            }
         } else {
-            balance -= amount;
-            addTransaction("Withdraw", amount);
-            return true;
+            return false;
         }
     }
 
