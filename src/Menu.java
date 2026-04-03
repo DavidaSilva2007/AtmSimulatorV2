@@ -47,6 +47,8 @@ public class Menu {
 
                     if (user.withdraw(withdrawAmount)) {
                         System.out.println("Successfully withdraw.");
+                    } else if (withdrawAmount > user.getBalance()) {
+                        System.out.println("Withdraw failed, insuficient funds.");
                     } else {
                         System.out.println("Withdraw failed.");
                     }
