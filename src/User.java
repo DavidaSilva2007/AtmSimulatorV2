@@ -9,10 +9,18 @@ public class User {
     private double  balance;
     private ArrayList<String> transactions;
 
+    // Used by Data.loadUsers() to restore a saved user
     public User(String username, int PIN) {
         this.username = username;
         this.PIN = PIN;
         this.balance = 0;
+        this.transactions = new ArrayList<>();
+    }
+
+    public User(String username, int PIN, double balance) {
+        this.username = username;
+        this.PIN = PIN;
+        this.balance = balance;
         this.transactions = new ArrayList<>();
     }
 
@@ -37,27 +45,22 @@ public class User {
     }
 
     public boolean deposit(double amount) {
-        if (amount <= 0 && amount > balance) {
+        if (amount <= 0) {
             return false;
-        } else {
-            balance += amount;
-            addTransaction("Deposit", amount);
-            return true;
         }
+        balance += amount;
+        addTransaction("Deposit", amount);
+        return true;
     }
 
     public boolean withdraw(double amount) {
-        if (amount <= balance) {
-            if (amount <= 0) {
-                return false;
-            } else {
-                balance -= amount;
-                addTransaction("Withdraw", amount);
-                return true;
-            }
-        } else {
+        if (amount <= balance || amount > balance) {
             return false;
         }
+        balance -= amount;
+        addTransaction("Withdraw", amount);
+        return true;
+
     }
 
 
@@ -65,7 +68,6 @@ public class User {
     private void addTransaction(String type, double amount) {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter customFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
         String record = now.format(customFormatter)
                 + " | " + type
                 + " | $" + amount
