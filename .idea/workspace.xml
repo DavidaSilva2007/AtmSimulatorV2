@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5599c17d-c984-4b2d-a651-d76d533bd4bd" name="Changes" comment="Bug fixes." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DavidaSilva2007&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DavidaSilva2007/AtmSimulatorV2.git&quot;,
+    &quot;accountId&quot;: &quot;4321e4cc-0d26-43e0-8ce4-399def4d2a82&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3AGjxze82oYJJ6WIsmwHVVOfuLf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.55" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.55" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5599c17d-c984-4b2d-a651-d76d533bd4bd" name="Changes" comment="" />
+      <created>1772226052398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772226052398</updated>
+      <workItem from="1772226055494" duration="3437000" />
+      <workItem from="1772258625359" duration="11000" />
+      <workItem from="1772306157588" duration="1973000" />
+      <workItem from="1772338177039" duration="2176000" />
+      <workItem from="1772388736890" duration="2307000" />
+      <workItem from="1772470549301" duration="1832000" />
+      <workItem from="1772478168218" duration="706000" />
+      <workItem from="1772643621357" duration="98000" />
+      <workItem from="1775232831048" duration="983000" />
+      <workItem from="1775243567229" duration="9000" />
+      <workItem from="1775342851807" duration="6260000" />
+      <workItem from="1775491046825" duration="26000" />
+      <workItem from="1775492517079" duration="634000" />
+      <workItem from="1775493442059" duration="62000" />
+      <workItem from="1777306954650" duration="941000" />
+      <workItem from="1777566086297" duration="51000" />
+      <workItem from="1788570298620" duration="1887000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added addTransactions, added more testing in Main class aswell.">
+      <option name="closed" value="true" />
+      <created>1772243745030</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772243745031</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added some of Manu. Finished User.">
+      <option name="closed" value="true" />
+      <created>1772247385424</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772247385424</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished Menu. Main still needs to be done. Only testing code is on it.">
+      <option name="closed" value="true" />
+      <created>1772258552777</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772258552777</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Start menu, and first case of log in menu completed. (Log in only)">
+      <option name="closed" value="true" />
+      <created>1772307056006</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772307056006</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finished main structure, needs formatting still">
+      <option name="closed" value="true" />
+      <created>1772316927638</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772316927638</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Finished all options. Added about me page">
+      <option name="closed" value="true" />
+      <created>1772343970437</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772343970437</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Upgraded menu's formatting.">
+      <option name="closed" value="true" />
+      <created>1772429220745</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772429220749</updated>
+    </task>
+    <task id="LOCAL-00008" summary="More debugging.">
+      <option name="closed" value="true" />
+      <created>1772472153296</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772472153296</updated>
+    </task>
+    <task id="LOCAL-00009" summary="More debugging.">
+      <option name="closed" value="true" />
+      <created>1775234489623</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1775234489627</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Big structural updates.">
+      <option name="closed" value="true" />
+      <created>1775364362839</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1775364362839</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Bug fixes.">
+      <option name="closed" value="true" />
+      <created>1788571825725</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1788571825725</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added addTransactions, added more testing in Main class aswell." />
+    <MESSAGE value="Added some of Manu. Finished User." />
+    <MESSAGE value="Finished Menu. Main still needs to be done. Only testing code is on it." />
+    <MESSAGE value="Start menu, and first case of log in menu completed. (Log in only)" />
+    <MESSAGE value="Finished main structure, needs formatting still" />
+    <MESSAGE value="Finished all options. Added about me page" />
+    <MESSAGE value="Upgraded menu's formatting." />
+    <MESSAGE value="More debugging." />
+    <MESSAGE value="Big structural updates." />
+    <MESSAGE value="Bug fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes." />
+  </component>
+</project>
