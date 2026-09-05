@@ -65,6 +65,8 @@ public class Data {
             }
         } catch (IOException e) {
             System.out.println("Error loading data: " + e.getMessage());
+        } catch (org.json.JSONException e) {
+            System.out.println("Data file is corrupted or invalid: " + e.getMessage());
         }
         return users;
     }

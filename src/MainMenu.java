@@ -2,9 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainMenu {
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
 
-    public void menu(User user, Data data, ArrayList<User> users) {
+    public void menu(User user, Data data, ArrayList<User> users, Scanner scanner) {
+        this.scanner = scanner;
         int menuChoice;
 
         do {
@@ -19,14 +20,14 @@ public class MainMenu {
             System.out.println("6. Logout");
             System.out.print("Enter option: ");
 
-            menuChoice = scanner.nextInt();
+            menuChoice = readInt();
 
             switch (menuChoice) {
                 case 1:
                     // Deposit
                     Main.bigGap();
                     System.out.print("Enter deposit amount: $");
-                    double depositAmount = scanner.nextDouble();
+                    double depositAmount = readDouble();
 
                     if (user.deposit(depositAmount)) {
                         System.out.println("Successfully deposit. New balance: $" + String.format("%.2f", user.getBalance()));
@@ -39,16 +40,16 @@ public class MainMenu {
                 case 2:
                     // Withdraw
                     Main.bigGap();
-                    System.out.print("Enter withdraw amount: ");
-                    double withdrawAmount = scanner.nextDouble();
+                    System.out.print("Enter withdraw amount: $");
+                    double withdrawAmount = readDouble();
 
                     if (user.withdraw(withdrawAmount)) {
-                        System.out.println("Successfully withdraw. New balance: $s" + String.format("%.2f", user.getBalance()));
+                        System.out.println("Successfully withdrew. New balance: $" + String.format("%.2f", user.getBalance()));
                         data.saveUsers(users);
                     } else if (withdrawAmount > user.getBalance()) {
                         System.out.println("Withdraw failed, insufficient funds.");
                     } else {
-                        System.out.println("Withdraw failed.");
+                        System.out.println("Withdraw failed, enter an amount greater than $0.");
                     }
                     backOption();
                     break;
@@ -76,7 +77,7 @@ public class MainMenu {
                     // About Me
                     Main.bigGap();
                     System.out.print("Please enter PIN for confirmation: ");
-                    int PINInput = scanner.nextInt();
+                    int PINInput = readInt();
 
                     if (user.checkPIN(PINInput)) {
                         System.out.println("Username: " + user.getUsername());
@@ -104,11 +105,31 @@ public class MainMenu {
     public void backOption() {
         System.out.println();
         System.out.print("Enter 1 to go back: ");
-        int backButton = scanner.nextInt();
+        int backButton = readInt();
 
         while (backButton != 1) {
             System.out.println("Invalid choice, try again.");
-            backButton = scanner.nextInt();
+            backButton = readInt();
         }
+    }
+
+    private int readInt() {
+        while (!scanner.hasNextInt()) {
+            System.out.print("Please enter a whole number: ");
+            scanner.next();
+        }
+        int value = scanner.nextInt();
+        scanner.nextLine();
+        return value;
+    }
+
+    private double readDouble() {
+        while (!scanner.hasNextDouble()) {
+            System.out.print("Please enter a valid number: ");
+            scanner.next();
+        }
+        double value = scanner.nextDouble();
+        scanner.nextLine();
+        return value;
     }
 }

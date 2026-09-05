@@ -1,5 +1,4 @@
 import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
@@ -54,7 +53,7 @@ public class User {
     }
 
     public boolean withdraw(double amount) {
-        if (amount <= balance || amount > balance) {
+        if (amount <= 0 || amount > balance) {
             return false;
         }
         balance -= amount;
@@ -70,8 +69,8 @@ public class User {
         DateTimeFormatter customFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String record = now.format(customFormatter)
                 + " | " + type
-                + " | $" + amount
-                + " | Balance: $" + balance;
+                + " | $" + String.format("%.2f", amount)
+                + " | Balance: $" + String.format("%.2f", getBalance());
         transactions.add(record);
     }
 }
